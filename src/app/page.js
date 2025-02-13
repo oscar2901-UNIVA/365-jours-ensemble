@@ -16,14 +16,6 @@ export default function Home() {
       transition={{ duration: 1, ease: "easeOut" }}
       className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6"
     >
-      <iframe
-        src="https://share.icloud.com/photos/068WLMQH-H-QZvxnQTzQi1WpQ"
-        width="100%"
-        height="600px"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-
       <Counter />
       <Playlist />
       <Timeline />
