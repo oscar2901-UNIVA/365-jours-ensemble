@@ -6,16 +6,10 @@ import Map from "./components/Map";
 import Gallery from "./components/Gallery";
 import LoveLetters from "./components/LoveLetters";
 import TypewriterEffect from "./components/Typewriter";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6"
-    >
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       <Counter />
       <Playlist />
       <Timeline />
@@ -23,6 +17,6 @@ export default function Home() {
       <Gallery />
       <LoveLetters />
       <TypewriterEffect />
-    </motion.div>
+    </div>
   );
 }

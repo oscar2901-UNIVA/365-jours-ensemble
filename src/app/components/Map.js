@@ -1,11 +1,17 @@
 "use client";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 
+// Cargar MapContainer y componentes de Leaflet solo en el cliente
+const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
+
 const places = [
-  { name: "📍 Lugar donde nos conocimos", coords: [48.8566, 2.3522] }, // París (ejemplo)
-  { name: "💑 Nuestro primer viaje", coords: [41.9028, 12.4964] }, // Roma (ejemplo)
-  { name: "🍽️ Nuestra primera cena juntos", coords: [40.7128, -74.0060] } // Nueva York (ejemplo)
+  { name: "📍 Lugar donde nos conocimos", coords: [48.8566, 2.3522] }, // París
+  { name: "💑 Nuestro primer viaje", coords: [41.9028, 12.4964] }, // Roma
+  { name: "🍽️ Nuestra primera cena juntos", coords: [40.7128, -74.0060] } // Nueva York
 ];
 
 export default function Map() {
