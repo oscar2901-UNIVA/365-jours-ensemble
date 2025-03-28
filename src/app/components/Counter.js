@@ -119,7 +119,7 @@ export default function Counter() {
           <Typewriter
             options={{
               strings: [
-                "<span style='color: #e83b8e; text-shadow: 0 2px 4px rgba(232, 59, 142, 0.3)'>🇲🇽❤️🇫🇷 Un Amor Sin Fronteras</span>",
+                "<span style='color: #e83b8e; text-shadow: 0 2px 4px rgba(232, 59, 142, 0.3)'>❤️ Un Amor Sin Fronteras</span>",
                 "<span style='color: #d6336c'>365 Días de Felicidad</span>",
                 "<span style='color: #c2255c'>Mon Cœur Est à Toi</span>",
                 "<span style='color: #e64980'>De México a Francia con Amor</span>",
@@ -167,7 +167,7 @@ export default function Counter() {
         </p>
 
         {/* Botón con efecto */}
-        <motion.button
+     {/*    <motion.button
           onClick={throwConfetti}
           whileTap={{ scale: 0.95 }}
           whileHover={{
@@ -182,7 +182,7 @@ export default function Counter() {
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 0.1 }}
           />
-        </motion.button>
+        </motion.button> */}
 
         {/* Mensaje de amor que aparece */}
         <AnimatePresence>
