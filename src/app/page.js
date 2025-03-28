@@ -7,7 +7,7 @@ import Gallery from "./components/Gallery";
 import LoveLetters from "./components/LoveLetters";
 import TypewriterEffect from "./components/Typewriter";
 import dynamic from "next/dynamic";
-import FloatingHearts from "./components/FloatingHearts 2";
+import FloatingHearts from "./components/FloatingHearts";
 const MapTogether = dynamic(() => import("./components/MapTogether"), {
   ssr: false,
   loading: () => (
