@@ -226,10 +226,10 @@ export default function MapTogether() {
 
   return (
     <div className="w-full max-w-6xl mx-auto my-8 px-4">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-rose-700">
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#f783ac] ">
         Nuestra Historia de Amor
       </h1>
-      <p className="text-center text-lg text-rose-600 mb-8">
+      <p className="text-center text-lg text-rose-300 mb-8 ">
         Cada marcador representa un momento especial en nuestra relación
       </p>
 

@@ -184,7 +184,7 @@ const timelineData = [
 export default function Timeline() {
   return (
     <div className="p-8 text-white min-h-screen mt-20">
-      <h2 className="text-4xl font-bold text-center mb-8 text-rose-400">
+      <h2 className="text-4xl font-bold text-center mb-8 text-[#f783ac]">
         📅 Nuestra Historia
       </h2>
 
