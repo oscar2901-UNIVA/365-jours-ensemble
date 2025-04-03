@@ -23,11 +23,6 @@ export default function Home() {
       <Playlist />
       <Carousel />
       <Timeline />
-
-      {/* <Map /> 
-      <Playlist />
-      <TypewriterEffect />
-      */}
     </div>
   );
 }

@@ -176,12 +176,11 @@ const timelineData = [
     icon: <FaHeart />,
     color: "#d81b60",
   },
-  
 ];
 
 export default function Timeline() {
   return (
-    <div className="p-8 text-white min-h-screen">
+    <div className="p-8 text-white min-h-screen mt-20">
       <h2 className="text-4xl font-bold text-center mb-8 text-rose-400">
         📅 Nuestra Historia
       </h2>
@@ -194,6 +193,7 @@ export default function Timeline() {
             contentStyle={{ background: event.color, color: "#fff" }}
             contentArrowStyle={{ borderRight: `7px solid ${event.color}` }}
             date={event.date}
+            dateClassName="text-white lg:text-black"
             iconStyle={{ background: event.color, color: "#fff" }}
             icon={event.icon}
           >
@@ -202,6 +202,9 @@ export default function Timeline() {
         ))}
 
         <VerticalTimelineElement
+          contentStyle={{ background: "#f195d8", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #f195d8" }}
+          dateClassName="text-white lg:text-black"
           iconStyle={{ background: "#f195d8", color: "#fff" }}
           icon={<FaHeart />}
         >

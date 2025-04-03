@@ -11,12 +11,8 @@ export default function Counter() {
     minutes: 0,
     seconds: 0,
   });
-  const [showLoveMessage, setShowLoveMessage] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
 
-  // Calcula el tiempo exacto juntos (CORREGIDO)
   useEffect(() => {
-    // Fecha de aniversario a la 1:00 AM (UTC)
     const anniversaryDate = new Date("2024-04-07T01:00:00Z").getTime();
 
     const timer = setInterval(() => {
@@ -36,54 +32,6 @@ export default function Counter() {
     return () => clearInterval(timer);
   }, []);
 
-  // Confetti mejorado con efectos especiales
-  const throwConfetti = useCallback(() => {
-    confetti({
-      particleCount: 150,
-      spread: 80,
-      origin: { y: 0.6 },
-      colors: ["#ff69b4", "#ff1493", "#ff007f", "#ff85a2", "#f72585"],
-      shapes: ["circle", "heart"],
-    });
-
-    // Confetti adicional con dirección diferente
-    setTimeout(() => {
-      confetti({
-        particleCount: 50,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: ["#ff69b4"],
-      });
-    }, 250);
-
-    setTimeout(() => {
-      confetti({
-        particleCount: 50,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: ["#ff1493"],
-      });
-    }, 400);
-
-    // Efecto de corazones gigantes
-    if (clickCount > 2) {
-      confetti({
-        particleCount: 5,
-        spread: 70,
-        origin: { y: 0.3 },
-        shapes: ["heart"],
-        scalar: 3,
-      });
-    }
-
-    setClickCount((prev) => prev + 1);
-    setShowLoveMessage(true);
-    setTimeout(() => setShowLoveMessage(false), 5000); // Mensajes duran 5 segundos
-  }, [clickCount]);
-
-  // Mensajes aleatorios de amor (actualizados)
   const loveMessages = [
     "¡Te amo más que ayer! 💖",
     "La distancia no es nada cuando el amor es verdadero ✈️",
@@ -159,56 +107,7 @@ export default function Counter() {
             />
           </div>
         </motion.div>
-
-        {/* Mensaje especial */}
-        <p className="text-lg mb-6 text-pink-700">
-          Desde el <span className="font-bold">7 de abril de 2024</span>, cada
-          instante contigo ha sido mágico ✨
-        </p>
-
-        {/* Botón con efecto */}
-     {/*    <motion.button
-          onClick={throwConfetti}
-          whileTap={{ scale: 0.95 }}
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 15px rgba(255, 105, 180, 0.5)",
-          }}
-          className="relative mt-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 rounded-full shadow-lg font-medium text-lg overflow-hidden"
-        >
-          <span className="relative z-10">🎉 ¡Celebrar nuestro amor!</span>
-          <motion.span
-            className="absolute inset-0 bg-white opacity-0 hover:opacity-10"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 0.1 }}
-          />
-        </motion.button> */}
-
-        {/* Mensaje de amor que aparece */}
-        <AnimatePresence>
-          {showLoveMessage && (
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="mt-6 p-3 bg-pink-100 border border-pink-300 rounded-lg text-pink-700"
-            >
-              {randomMessage}
-            </motion.p>
-          )}
-        </AnimatePresence>
       </motion.div>
-
-      {/* Efecto especial después de varios clicks */}
-      {clickCount > 5 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute inset-0 pointer-events-none"
-        >
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-transparent to-pink-50/50"></div>
-        </motion.div>
-      )}
     </div>
   );
 }

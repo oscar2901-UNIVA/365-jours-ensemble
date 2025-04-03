@@ -5,7 +5,7 @@ export default function Playlist() {
   const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 500 });
 
   return (
-    <div style={fadeIn} className="flex flex-col items-center">
+    <div style={fadeIn} className="flex flex-col items-center mt-20">
       <h2 className="text-3xl font-bold mb-4 text-[#f783ac] text-center">
         Nuestra Playlist Especial
       </h2>

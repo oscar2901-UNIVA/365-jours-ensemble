@@ -61,7 +61,7 @@ export default function Carousel() {
 
   return (
     <>
-      <h2 className="text-3xl font-bold mb-4 text-[#f783ac] text-center mt-4">
+      <h2 className="text-3xl font-bold mb-4 text-[#f783ac] text-center mt-20">
         Momentos importantes
       </h2>
       <div ref={sliderRef} className={`keen-slider ${styles.carousel}`}>
