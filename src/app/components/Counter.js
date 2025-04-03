@@ -32,25 +32,8 @@ export default function Counter() {
     return () => clearInterval(timer);
   }, []);
 
-  const loveMessages = [
-    "¡Te amo más que ayer! 💖",
-    "La distancia no es nada cuando el amor es verdadero ✈️",
-    "Eres mi persona favorita en todo el mundo 🌎",
-    "Juntos aunque sea en la distancia 💌",
-    "Mon amour, je t'attends avec impatience 🗼",
-    "Pronto estaré en tus brazos 🤗",
-    "Eres mi sueño hecho realidad 🌟",
-    "De México a Francia, mi corazón viaja contigo 💘",
-  ];
-
-  const randomMessage =
-    loveMessages[Math.floor(Math.random() * loveMessages.length)];
-
   return (
     <div className="min-h-screen  flex flex-col items-center justify-center p-6 relative overflow-hidden">
-      {/* Corazones flotantes mejorados */}
-
-      {/* Efecto de brillo */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-pink-200 opacity-20 blur-3xl animate-float"></div>
         <div className="absolute top-3/4 right-1/4 w-40 h-40 rounded-full bg-rose-300 opacity-15 blur-3xl animate-float-delay"></div>
@@ -63,17 +46,20 @@ export default function Counter() {
         className="z-10 text-center max-w-md w-full"
       >
         {/* Typewriter con animación lenta */}
-        <div className="text-2xl md:text-3xl font-bold mb-6 min-h-[3rem]">
+        <div className="text-2xl md:text-3xl font-bold mb-6 min-h-[5rem] max-w-[20rem]">
           <Typewriter
             options={{
               strings: [
-                "<span style='color: #e83b8e; text-shadow: 0 2px 4px rgba(232, 59, 142, 0.3)'>❤️ Un Amor Sin Fronteras</span>",
-                "<span style='color: #d6336c'>365 Días de Felicidad</span>",
-                "<span style='color: #c2255c'>Mon Cœur Est à Toi</span>",
-                "<span style='color: #e64980'>De México a Francia con Amor</span>",
-                "<span style='color: #f06595'>Je t'aime plus chaque jour</span>",
-                "<span style='color: #d6336c'>Amor a Distancia, Corazón Cerca</span>",
-                "<span style='color: #e83b8e'>7 Avril: Notre Jour Spécial</span>",
+                "<span style='color: #e83b8e'>No pensaba que funcionara así, no buscaba amor y un día te encontré.</span>",
+                "<span style='color: #d6336c'>¡Te amo más que ayer, menos que mañana!</span>",
+                "<span style='color: #c2255c'>La distancia no es nada cuando el amor es verdadero ✈️</span>",
+                "<span style='color: #e64980'>Eres mi persona favorita en todo el mundo 🌎</span>",
+                "<span style='color: #f06595'>Juntos aunque sea en la distancia 💌</span>",
+                "<span style='color: #d6336c'>je t'aime mon amour 🗼</span>",
+                "<span style='color: #e83b8e'>Pronto estaré en tus brazos 🤗</span>",
+                "<span style='color: #c2255c'>Eres mi sueño hecho realidad 🌟</span>",
+                "<span style='color: #f06595'>Mi corazón siempre está contigo 💘</span>",
+                "<span style='color: #d6336c'>Eras esa historia que no quiero saber el final.</span>",
               ],
               autoStart: true,
               loop: true,
@@ -90,7 +76,7 @@ export default function Counter() {
         {/* Contador de tiempo con animación */}
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-200 mb-6"
+          className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-pink-200 mb-6 w-[20rem]"
         >
           <h3 className="text-xl font-semibold text-gray-700 mb-4">
             Nuestro tiempo juntos
