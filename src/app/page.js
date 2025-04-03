@@ -3,11 +3,10 @@ import Counter from "./components/Counter";
 import Playlist from "./components/Playlist";
 import Timeline from "./components/Timeline";
 
-import Gallery from "./components/Gallery";
-import LoveLetters from "./components/LoveLetters";
-import TypewriterEffect from "./components/Typewriter";
 import dynamic from "next/dynamic";
 import FloatingHearts from "./components/FloatingHearts";
+import Carousel from "./components/Carousel";
+
 const MapTogether = dynamic(() => import("./components/MapTogether"), {
   ssr: false,
   loading: () => (
@@ -22,14 +21,11 @@ export default function Home() {
       <Counter />
       <MapTogether />
       <Playlist />
+      <Carousel />
+      <Timeline />
 
       {/* <Map /> 
-      
-      
       <Playlist />
-      <Timeline />
-      <Gallery />
-      <LoveLetters />
       <TypewriterEffect />
       */}
     </div>

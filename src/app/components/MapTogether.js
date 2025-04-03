@@ -10,7 +10,6 @@ export default function MapTogether() {
     const initMap = async () => {
       const L = await import("leaflet");
 
-      // Configuración de iconos
       delete L.Icon.Default.prototype._getIconUrl;
       L.Icon.Default.mergeOptions({
         iconRetinaUrl: "/images/marker-icon-2x.png",
@@ -19,7 +18,6 @@ export default function MapTogether() {
       });
 
       if (!mapRef.current && mapContainerRef.current) {
-        // Vista centrada entre México y Europa
         mapRef.current = L.map(mapContainerRef.current).setView(
           [20.93660736628395, -103.39615067791014],
           5
